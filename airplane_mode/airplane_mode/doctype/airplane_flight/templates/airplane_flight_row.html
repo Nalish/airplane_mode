@@ -1,0 +1,11 @@
+<div style="border:1px solid #ccc; padding:5px; margin:10px; border-radius:8px;">
+
+    <h2>{{ doc.airplane }}</h2>
+    <p> {{ doc.source_airport_code }}->{{ doc.destination_airport_code }}</p>
+  
+    <p>{{ doc.date_of_departure }}|{{ doc.time_of_departure }}|{{ doc.duration }}</p>
+   
+
+    <a href="/{{ doc.route }}">View Flight</a>
+
+</div>

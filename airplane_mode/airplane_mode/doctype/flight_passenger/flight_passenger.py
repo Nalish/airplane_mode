@@ -16,6 +16,7 @@ class FlightPassenger(Document):
 
 		date_of_birth: DF.Date
 		first_name: DF.Data
+		full_name: DF.Data | None
 		last_name: DF.Data
 	# end: auto-generated types
 

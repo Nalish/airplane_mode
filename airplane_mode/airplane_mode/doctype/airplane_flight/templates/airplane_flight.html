@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }}</h1>
+
+<h2>Flight Details</h2>
+<ul>
+    <li>Airline:{{airplane}}</li>
+    <li>{{source_airport}} ->{{destination_airport}}</li>
+    <li>{{date_of_departure}} |{{time_of_departure}}</li>
+    <li>Duration:{{duration}}</li>
+</ul>
+<a class="btn btn-info" href="/book-flight-ticket?flight={{ doc.name }}">
+    Book Flight
+</a>
+{% endblock %}
+
+<!-- this is a sample default web page template -->
