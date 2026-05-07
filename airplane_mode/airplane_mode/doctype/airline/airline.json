@@ -1,15 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:airline_name",
  "creation": "2026-04-23 15:54:48.501266",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "airline_name",
   "founding_year",
   "headquaters",
+  "route",
   "column_break_hzec",
-  "customer_care_number"
+  "customer_care_number",
+  "website",
+  "is_published"
  ],
  "fields": [
   {
@@ -35,21 +39,47 @@
    "in_list_view": 1,
    "label": "Customer Care Number",
    "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "airline_name",
+   "fieldtype": "Data",
+   "label": "Airline Name",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
  "grid_page_length": 50,
+ "has_web_view": 1,
+ "web_template": "airline",
  "index_web_pages_for_search": 1,
+ "website_search_field": "airline_name",
  "links": [
   {
    "link_doctype": "Airplane",
    "link_fieldname": "airline"
   }
  ],
- "modified": "2026-04-23 20:23:48.146704",
+ "modified": "2026-04-29 20:14:35.238781",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airline",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -65,9 +95,11 @@
    "write": 1
   }
  ],
+ "route": "airlines",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "airline_name"
 }

@@ -1,40 +1,52 @@
-### airplane_mode
+# Airplane Mode
 
-Manage airplanes
+A flight management application built with Frappe Framework for managing airplanes, flights, and airline operations.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+- Manage airplane records
+- Store flight details
+- Track airline operations
+- Generate reports
+- Manage flight schedules
+
+## Installation
+
+Clone the repository inside your Frappe bench apps directory:
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch main
+cd frappe-bench/apps
+git clone https://github.com/Nalish/airplane_mode.git
+```
+
+Go back to the bench directory and install the app:
+
+```bash
+cd ..
 bench install-app airplane_mode
 ```
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+Run the server:
 
 ```bash
-cd apps/airplane_mode
-pre-commit install
+bench start
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+Open in your browser:
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
-### CI
+http://localhost:8000
 
-This app can use GitHub Actions for CI. The following workflows are configured:
+## Screenshots
 
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
+### Airplane Ticket
 
+![Dashboard](./screenshots/BookTicket.png)
 
-### License
+### Airplane Flight
 
-mit
+![Flight Management](./screenshots/AirplaneFlight.png)
+
+### Passenger Ticket
+
+![Reports](./screenshots/Screenshot%202026-05-07%20233614.png)
+
